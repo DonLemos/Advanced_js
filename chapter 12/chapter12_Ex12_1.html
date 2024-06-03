@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course</div>
+    Search for:
+    <input id="sText" type="text">
+    <br> Replace with:
+    <input id="rText" type="text">
+    <br>
+    <button>Replace</button>
+
+    <script>
+        // let button = document.querySelector("button");
+        // button.addEventListener("click", lookup);
+
+        // function lookup() {
+        //     let output = document.getElementById("output");
+        //     let findValue = document.getElementById("sText").value;
+        //     let rt = document.getElementById("rText").value;
+
+        //     let s = output.textContent;
+        //     const re = new RegExp(findValue, "gi");
+        //     if (s.match(re)) {
+        //         s = s.replace(re, rt);
+        //         output.textContent = s;
+        //     }
+        // }
+
+        // const output = document.getElementById("output");
+        // const findValue = document.getElementById("sText");
+        // const replaceValue = document.getElementById("rText");
+        // document.querySelector("button").addEventListener("click", lookUp);
+
+        // function lookUp() {
+        //     const s = output.textContent;
+        //     const rt = replaceValue.value;
+        //     const re = new RegExp(findValue.value, "gi");
+        //     if (s.match(re)) {
+        //         let newValue = s.replace(re, rt);
+        //         output.textContent = newValue;
+        //     }
+        // }
+
+        let emailPattern = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g;
+        let validEmail = "maaike_1234@email.com";
+        let invalidEmail = "maaike@mail@.com";
+        console.log(validEmail.match(emailPattern));
+        console.log(invalidEmail.match(emailPattern));
+    </script>
+</body>
+
+</html>

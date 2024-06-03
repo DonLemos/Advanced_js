@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chapter 12</h1>
+</body>
+<script>
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let text = "I love react and JavaScript!";
+    // console.log(text.match(/JavaScript/i));
+    // console.log(text.match(/JavaScript|nodejs|react/ig));
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let text2 = "d";
+    // console.log(text2.match(/[abcd]/))
+    // console.log(text2.match(/[a-zA-Z]/));
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let text3 = "Just some text.";
+    // console.log(text3.match(/./g));
+    // console.log(text3.match(/\./g));
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let text4 = "I'm 29 years old.";
+    // console.log(text4.match(/\d/g));
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let text5 = "In the end or at the beginning?";
+    // console.log(text4.match(/\bin/gi));
+
+    // //REGULAR EXPRESSIONS (REGEX)
+    // let nr = 357;
+    // console.log(nr.match(/3/g));
+
+    // //GROUPS
+    // let text = "I love JavaScript but dislike spiders!"
+    // console.log(text.match(/(love|dislike)\s(javascript|spiders)/ig));
+
+    // console.log(text.match(/[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]/g));
+
+    // let text2 = "abcabcabc";
+    // console.log(text2.match(/(abc){1,2}/));
+
+    // //PRACTICAL REGEX
+    // let text = "That's not the case.";
+    // console.log(text.search(/Case/i));
+
+    // let text2 = "Coding is fun. Coding opens up a lot of opportunities.";
+    // console.log(text2.replace(/Coding/g, "JavaScript"));
+
+</script>
+
+</html>
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <!-- <div id="output">Complete JavaScript Course</div>
+    Search for:
+    <input id="sText" type="text">
+    <br> Replace with:
+    <input id="rText" type="text">
+    <br>
+    <button>Replace</button> -->
+
+    <script>
+        // let button = document.querySelector("button");
+        // button.addEventListener("click", lookup);
+
+        // function lookup() {
+        //     let output = document.getElementById("output");
+        //     let findValue = document.getElementById("sText").value;
+        //     let rt = document.getElementById("rText").value;
+
+        //     let s = output.textContent;
+        //     const re = new RegExp(findValue, "gi");
+        //     if (s.match(re)) {
+        //         s = s.replace(re, rt);
+        //         output.textContent = s;
+        //     }
+        // }
+
+        // const output = document.getElementById("output");
+        // const findValue = document.getElementById("sText");
+        // const replaceValue = document.getElementById("rText");
+        // document.querySelector("button").addEventListener("click", lookUp);
+
+        // function lookUp() {
+        //     const s = output.textContent;
+        //     const rt = replaceValue.value;
+        //     const re = new RegExp(findValue.value, "gi");
+        //     if (s.match(re)) {
+        //         let newValue = s.replace(re, rt);
+        //         output.textContent = newValue;
+        //     }
+        // }
+
+
+        // let emailPattern = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g;
+        // let validEmail = "maaike_1234@email.com";
+        // let invalidEmail = "maaike@mail@.com";
+        // console.log(validEmail.match(emailPattern));
+        // console.log(invalidEmail.match(emailPattern));
+    </script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Course</title>
+        </head>
+        <body>
+        <div class="output"></div>
+        <input type="text" placeholder="Enter Email">
+        <button>Check</button>
+<body>
+<script>
+    const output = document.querySelector(".output");
+    const emailVal = document.querySelector("input");
+    const btn = document.querySelector("button");
+    const emailExp =
+        /([A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z0-9]+)\w+/;
+        btn.addEventListener("click", (e) => {
+        const val = emailVal.value;
+        const result = emailExp.test(val);
+        let response = "";
+        if (!result) {
+            response = "Invalid Email";
+            output.style.color = "red";
+        } else {
+            response = "Valid Email";
+            output.style.color = "green";
+        }
+        emailVal.value = "";
+        output.textContent = response;
+    }); 
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12 - Argument</title>
+</head>
+
+<body>
+    <script>
+        // test(1, 2, 3);
+        // function test(a, b, c) {
+        //     console.log("first:", a, arguments[0]);
+        //     console.log("second:", b, arguments[1]);
+        //     console.log("third:", c, arguments[2]);
+        // }
+        //test("fun", "js", "secrets");
+
+        // function test(a, b, c) {
+        //     a = "nice";
+        //     arguments[1] = "Javascript";
+        //     console.log("first", a, arguments[0]);
+        //     console.log("second", b, arguments[1]);
+        //     console.log("third", c, arguments[2]);
+        // }
+        // test("fun", "js", "secrets");
+    </script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12 - Advanced JS </title>
+</head>
+
+<body>
+    <script>
+        // function showNames() {
+        //     let lastOne = "";
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         lastOne = arguments[i];
+        //     }
+        //     return lastOne;
+        // }
+        // console.log(showNames("JavaScript", "Laurence", "Mike", "Larry"));
+
+        "use strict";
+        function sayHi() {
+            let greeting = "Hello!";
+            console.log(greeting);
+        }
+        sayHi();
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS - Exercise 12.3 </title>
+</head>
+
+<body>
+    <script>
+
+        function somethingVeryDangerous() {
+            throw RangeError();
+        }
+        try {
+            somethingVeryDangerous();
+        } catch (e) {
+            if (e instanceof TypeError) {
+                // deal with TypeError exceptions
+                console.log("Type error");
+            } else if (e instanceof RangeError) {
+                // deal with RangeError exceptions
+                conosle.log("Range error");
+            } else if (e instanceof EvalError) {
+                // deal with EvalError exceptions
+                console.log("Eval error")
+            } else {
+                //deal with all other exceptions
+                throw e; //rethrow
+            }
+        }
+    </script>
+</body>
+
+</html>

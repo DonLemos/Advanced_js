@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="addRandomNumber()">Add a number</button>
+</body>
+
+<script>
+    function addRandomNumber() {
+        let el = document.createElement("p");
+        el.innerText = Math.floor(Math.random() * 100);
+        document.body.appendChild(el);
+    }
+</script>
+
+</html>

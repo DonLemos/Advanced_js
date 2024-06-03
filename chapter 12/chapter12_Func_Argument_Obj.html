@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12 - Argument</title>
+</head>
+
+<body>
+    <script>
+        test(1, 2, 3);
+        function test(a, b, c) {
+            console.log("first:", a, arguments[0]);
+            console.log("second:", b, arguments[1]);
+            console.log("third:", c, arguments[2]);
+        }
+        test("fun", "js", "secrets");
+
+        function test(a, b, c) {
+            a = "nice";
+            arguments[1] = "Javascript";
+            console.log("first", a, arguments[0]);
+            console.log("second", b, arguments[1]);
+            console.log("third", c, arguments[2]);
+        }
+        test("fun", "js", "secrets");
+    </script>
+</body>
+
+</html>
+

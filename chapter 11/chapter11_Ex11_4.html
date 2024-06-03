@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.4</h1>
+    <div class="output"></div>
+
+    <script>
+
+        const output = document.querySelector(".output");
+        output.textContent = "Hello World";
+        output.style.height = "195px";
+        output.style.width = "395px";
+        output.style.backgroundColor = "Orange";
+        output.addEventListener("mousedown", function (e) {
+            message("green", e);
+        });
+        output.addEventListener("mouseover", function (e) {
+            message("red", e);
+        });
+        output.addEventListener("mouseout", function (e) {
+            message("yellow", e);
+        });
+        output.addEventListener("mouseup", function (e) {
+            message("blue", e);
+        });
+
+        function message(elColor, event) {
+            console.log(event.type);
+            output.style.backgroundColor = elColor;
+        }
+
+    </script>
+</body>
+
+</html>

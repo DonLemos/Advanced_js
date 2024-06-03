@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .square.blue {
+            background-color: blue;
+        }
+    </style>
+    <div id="shape" class="square blue"></div>
+    <button onclick="disappear()">Disappear!</button>
+</head>
+
+<body>
+    <script>
+        function disappear() {
+            document.getElementById("shape").classList.add("hide");
+        }
+    </script>
+
+</body>
+
+</html>

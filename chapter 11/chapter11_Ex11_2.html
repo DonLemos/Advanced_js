@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.2</h1>
+    <div>Pink</div>
+    <div>Purple</div>
+    <div>Orange</div>
+
+    <script>
+        // let divs = document.querySelectorAll("div");
+        // divs.forEach(e => e.addEventListener("click", changeColor));
+
+        // function changeColor(e) {
+        //     e.target.style.backgroundColor = e.target.textContent;
+        // }
+
+        // Book Method
+        const divs = document.querySelectorAll("div");
+        divs.forEach((el) => {
+            el.addEventListener("click", () => {
+                document.body.style.backgroundColor = el.textContent;
+            });
+        })
+    </script>
+</body>
+
+</html>

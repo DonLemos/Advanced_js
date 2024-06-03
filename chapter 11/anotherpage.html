@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>This is the redirected page</head>
+<body>
+    <script>
+        let q = window.location.search;
+        let params = new URLSearchParams(q);
+        let firstName = params.get("firstName");
+        let lastName = params.get("lastName");
+        let age = params.get("age");
+        let town = params.get("homeTown");
+        alert(`You name is ${firstName} ${lastName} and your age is ${age} and you are from ${town}!`);
+    </script>
+</body>
+
+</html>

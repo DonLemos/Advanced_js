@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body onload="unique(this)"></body>
+<h1> Advanced JS - Exercise 11.3</h1>
+<div>Pink</div>
+<div>Purple</div>
+<div>Orange</div>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", (e) => {
+    //     console.log(e);
+    // })
+
+    // function unique(e) {
+    //     console.log(e);
+    // }
+
+
+    window.onload = e => message(e, "Window finished loading");
+        function message(e, mess) {
+            console.log(e, mess);
+        }
+        document.addEventListener("DOMContentLoaded", (e) => {
+            message(e, "DOM finished loading");
+        });
+</script>
+</body>
+
+</html>

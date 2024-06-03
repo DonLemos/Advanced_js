@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Advanced JS - Exercise 11.5</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <input type="text" name="message" placeholder="Your Message">
+    <button class="btn1">Button 1</button>
+    <button class="btn2">Button 2</button>
+    <div>
+        <button class="btn3">Log</button>
+    </div>
+    <script>
+        let output = document.querySelector(".output");
+        let btn1 = document.querySelector(".btn1");
+        let btn2 = document.querySelector(".btn2");
+        let btn3 = document.querySelector(".btn3");
+        let input = document.querySelector("input");
+
+        let log = [];
+
+        btn1.addEventListener("click", setLog);
+        btn2.addEventListener("click", setLog);
+        btn3.addEventListener("click", printLog);
+
+        function setLog() {
+            let obj = {
+                "input": input.value,
+                "type": event.type,
+                "target": event.target.className
+            };
+            output.textContent = input.value + " " + event.type + " " + event.target.className;
+            log.push(obj);
+        };
+
+        function printLog() {
+            log.forEach(lg => console.log(lg.input + " " + lg.type + " " + lg.target));
+        }
+    </script>
+</body>
+
+</html>
+

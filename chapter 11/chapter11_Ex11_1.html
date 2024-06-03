@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.1</h1>
+    <script>
+        let darkMode = false;
+
+        window.onclick = () => {
+            console.log(darkMode);
+            if (!darkMode) {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                darkMode = true;
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                darkMode = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

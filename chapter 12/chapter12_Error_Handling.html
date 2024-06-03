@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS - Exercise 12.3 </title>
+</head>
+
+<body>
+    <script>
+
+        function somethingVeryDangerous() {
+            throw RangeError();
+        }
+        try {
+            somethingVeryDangerous();
+        } catch (e) {
+            if (e instanceof TypeError) {
+                // deal with TypeError exceptions
+                console.log("Type error");
+            } else if (e instanceof RangeError) {
+                // deal with RangeError exceptions
+                conosle.log("Range error");
+            } else if (e instanceof EvalError) {
+                // deal with EvalError exceptions
+                console.log("Eval error")
+            } else {
+                //deal with all other exceptions
+                throw e; //rethrow
+            }
+        }
+    </script>
+</body>
+
+</html>

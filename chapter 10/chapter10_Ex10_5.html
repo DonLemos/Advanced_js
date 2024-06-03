@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1 style="color:green;">Just an example</h1>
+    <div id="one" class="ex"> This is ID one</div>
+    <div id="two" class="ex">This is ID two</div>
+    <div id="three" class="ex">This is ID three</div>
+    <div id="four" class="ex">This is ID four</div>
+    <script>
+        let ans1 = document.querySelector(".ex");
+        let ans2 = document.querySelectorAll("div")
+        let ans3 = document.querySelectorAll(".ex");
+
+        console.log(ans1);
+        console.log(ans2);
+        ans3.forEach(e => console.log(e));
+
+    </script>
+</body>
+
+</html>

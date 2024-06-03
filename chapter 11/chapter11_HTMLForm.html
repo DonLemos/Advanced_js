@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11</h1>
+    <div id="Welcome">Hi there!</div>
+    <form>
+        <input type="text" name="firstname" placeholder="First Name" />
+        <input type="text" name="lastname" placeholder="Last Name" />
+        <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+
+    <script>
+        function sendInfo() {
+            let p = event.target.parentElement;
+            message("Welcome " + p.firstname.value + " " + p.lastname.value);
+        }
+        function message(m) {
+            document.getElementById("Welcome").innerHTML = m;
+        }
+
+    </script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.1</h1>
+    <script>
+        let darkMode = false;
+
+        window.onclick = () => {
+            console.log(darkMode);
+            if (!darkMode) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                darkMode = true;
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                darkMode = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.2</h1>
+    <div>Pink</div>
+    <div>Purple</div>
+    <div>Orange</div>
+
+    <script>
+        // let divs = document.querySelectorAll("div");
+        // divs.forEach(e => e.addEventListener("click", changeColor));
+
+        // function changeColor(e) {
+        //     e.target.style.backgroundColor = e.target.textContent;
+        // }
+
+        // Book Method
+        const divs = document.querySelectorAll("div");
+        divs.forEach((el) => {
+            el.addEventListener("click", () => {
+                document.body.style.backgroundColor = el.textContent;
+            });
+        })
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body onload="unique(this)"></body>
+<h1> Advanced JS - Exercise 11</h1>
+<div>Pink</div>
+<div>Purple</div>
+<div>Orange</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (e) => {
+        console.log(e);
+    })
+
+    function unique(e) {
+        console.log(e);
+    }
+</script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.3</h1>
+
+    <script>
+        window.onload = e => message(e, "Window finished loading");
+        function message(e, mess) {
+            console.log(e, mess);
+        }
+        document.addEventListener("DOMContentLoaded", (e) => {
+            message(e, "DOM finished loading");
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Chapter 11</h1>
+    <div id="divvy" onmouseover="changeColor()" style="width: 100px; height: 100px;
+background-color: pink;"></div>
+    <script>
+        function changeColor() {
+            document.getElementById("divvy").style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Chapter 11</h1>
+    <!-- <div id="divvy" onmouseover="changeColor()" style="width: 100px; height: 100px;
+background-color: pink;"></div> -->
+
+    <script>
+        //    function changeColor() {
+        //     document.getElementById("divvy").style.backgroundColor = "blue";
+        //    }
+    </script>
+
+    <!--Option 2-->
+
+    <body>
+
+        <div id="divvy" style="width: 100px; height: 100px;
+background-color: pink;"></div>
+
+        <script>
+            window.onload = function donenow() {
+                console.log("Hi");
+                document.getElementById("divvy").addEventListener("mousedown",
+                    function () { changeColor(this, "geen"); });
+                document.getElementById("divvy").addEventListener("mouseup",
+                    function () { changeColor(this, "yellow") });
+                document.getElementById("divvy").addEventListener("dblclick",
+                    function () { changeColor(this, "black") });
+                document.getElementById("divvy").addEventListener("mouseout",
+                    function () { changeColor(this, "blue"); });
+            }
+            console.log("Hi 2");
+            function changeColor(el, color) {
+                el.style.backgroundColor = color;
+            }
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11.4</h1>
+    <div class="output"></div>
+
+    <script>
+
+        const output = document.querySelector(".output");
+        output.textContent = "Hello World";
+        output.style.height = "200px";
+        output.style.width = "400px";
+        output.style.backgroundColor = "Orange";
+        output.addEventListener("mousedown", function (e) {
+            message("green", e);
+        });
+        output.addEventListener("mouseover", function (e) {
+            message("red", e);
+        });
+        output.addEventListener("mouseout", function (e) {
+            message("yellow", e);
+        });
+        output.addEventListener("mouseup", function (e) {
+            message("blue", e);
+        });
+
+        function message(elColor, event) {
+            console.log(event.type);
+            output.style.backgroundColor = elColor;
+        }
+
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11</h1>
+    <div></div>
+    <button type="button" onclick="triggerSomething()">click</button>
+    <script>
+        function triggerSomething() {
+            console.dir(event.target);
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <h1> Advanced JS - Exercise 11</h1>
+    <div id="Welcom">Hi there!</div>
+    <form>
+        <input type="text" name="firstname" placeholder="First Name" />
+        <input type="text" name="lastname" placeholder="Last Name" />
+        <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+
+    <script>
+        function sendInfo() {
+            let p = event.target.parentElement;
+            message("Welcome " + p.firstname.value + " " + p.lastname.value);
+        }
+        function message(m) {
+            document.getElementById("Welcome").innerHTML = m;
+        }
+
+    </script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Advanced JS - Exercise 11.5</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <input type="text" name="message" placeholder="Your Message">
+    <button class="btn1">Button 1</button>
+    <button class="btn2">Button 2</button>
+    <div>
+        <button class="btn3">Log</button>
+    </div>
+    <script>
+        let output = document.querySelector(".output");
+        let btn1 = document.querySelector(".btn1");
+        let btn2 = document.querySelector(".btn2");
+        let btn3 = document.querySelector(".btn3");
+        let input = document.querySelector("input");
+
+        let log = [];
+
+        btn1.addEventListener("click", setLog);
+        btn2.addEventListener("click", setLog);
+        btn3.addEventListener("click", printLog);
+
+        function setLog() {
+            let obj = {
+                "input": input.value,
+                "type": event.type,
+                "target": event.target.className
+            };
+            output.textContent = input.value + " " + event.type + " " + event.target.className;
+            log.push(obj);
+        };
+
+        function printLog() {
+            log.forEach(lg => console.log(lg.input + " " + lg.type + " " + lg.target));
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box0">Box #1</div>
+        <div class="box" id="box1">Box #2</div>
+        <div class="box" id="box2">Box #3</div>
+        <div class="box" id="box3">Box #4</div>
+    </div>
+    <script>
+        const main = document.querySelector(".container");
+        const boxes = document.querySelectorAll(".box");
+        main.addEventListener("click", (e) => {
+            console.log("4");
+        }, false);
+        main.addEventListener("click", (e) => {
+            console.log("1");
+        }, true);
+        boxes.forEach(ele => {
+            ele.addEventListener("click", (e) => {
+                console.log("3");
+                console.log(e.target.textContent);
+            }, false);
+            ele.addEventListener("click", (e) => {
+                console.log("2");
+                console.log(e.target.textContent);
+            }, true);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="welcome">Hi there!</div>
+    <form>
+        <input type="text" name="firstname" placeholder="First name" onchange="logEvent()" />
+        <input type="text" name="lastname" placeholder="Last name" onblur="logEvent()" />
+        <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+    <script>
+        function logEvent() {
+            let p = event.target;
+            if (p.name == "firstname") {
+                message("First Name Changed to " + p.value);
+            } else {
+                message("Last Name Changed to " + p.value);
+            }
+        }
+        function sendInfo() {
+            let p = event.target.parentElement;
+            message("Welcome " + p.firstname.value + " " + p.lastname.
+                value);
+        }
+        function message(m) {
+            document.getElementById("welcome").innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced JS - Exercise 11.7</title>
+</head>
+
+<body>
+    <div class="output1"></div>
+
+    <input type="text" placeholder="First Name" name="first"><br>
+    <input type="text" placeholder="Last Name" name="last"><br>
+
+    <script>
+        const output = document.querySelector(".output1");
+        const in1 = document.querySelector("input[name='first']");
+        const in2 = document.querySelector("input[name='last']");
+
+        in1.addEventListener("change", (e) => {
+            console.log("change");
+            updater(in1.value);
+        });
+        in1.addEventListener("blur", (e) => {
+            console.log("blur");
+        });
+        in1.addEventListener("focus", (e) => {
+            console.log("focus");
+        });
+        in2.addEventListener("change", (e) => {
+            console.log("change");
+            updater(in2.value);
+        });
+        in2.addEventListener("blur", (e) => {
+            console.log("blur");
+        });
+        in2.addEventListener("focus", (e) => {
+            console.log("focus");
+        });
+        function updater(str) {
+            output.textContent = str;
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!doctype html>
+<html>
+
+<body>
+
+    <body>
+        <div id="wrapper">JavaScript is fun!</div>
+        <input type="text" name="myNum1" onkeypress="numCheck()">
+        <input type="text" name="myNum2" onkeypress="numCheck2()">
+        <script>
+            function numCheck() {
+                message("Number: " + !isNaN(event.key));
+                return !isNaN(event.key);
+            }
+            function numCheck2() {
+                message("Not a number: " + isNaN(event.key));
+                return isNaN(event.key);
+            }
+            function message(m) {
+                document.getElementById('wrapper').innerHTML = m;
+            }
+        </script>
+    </body>
+
+</html>
+
+
+
+
+<!doctype html>
+<html>
+
+<body>
+
+    <body>
+        <div id="wrapper">JavaScript is fun!</div>
+        <input type="text" name="myNum1" onkeypress="return numCheck()" onpaste="return false">
+        <input type="text" name="myNum2" onkeypress="return numCheck2()" onpaste="return false">
+        <script>
+            function numCheck() {
+                message(!isNaN(event.key));
+                return !isNaN(event.key);
+            }
+            function numCheck2() {
+                message(isNaN(event.key));
+                return isNaN(event.key);
+            }
+            function message(m) {
+                document.getElementById("wrapper").innerHTML = m;
+            }
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
+<!-- <!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    
+    <input type="text" name="myNum1">
+    <input type="text" name="myNum2">
+
+    <script>
+
+        const eles = document.querySelectorAll("input");
+        const output = document.querySelector(".output");
+
+        eles.forEach(el => {
+            el.addEventListener("keydown", (e) => {
+                if (!isNaN(e.key)) {
+                    output.textContent += e.key;
+                }
+            });
+            el.addEventListener("keyup", (e) => {
+                console.log(e.key);
+            });
+            el.addEventListener("paste", (e) => {
+                console.log('pasted');
+            });
+        });
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin: 0 50px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        #dragme {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">
+        1
+        <div id="dragme" ondragstart="dStart()" draggable="true">
+            Drag Me Please!
+        </div>
+    </div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+</body>
+
+<script>
+    let holderItem;
+    function dStart() {
+        holderItem = event.target;
+    }
+    function nDrop() {
+        event.preventDefault();
+    }
+
+    function dDrop() {
+        event.preventDefault();
+        if (event.target.className == "box") {
+            event.target.appendChild(holderItem);
+        }
+    }
+</script>
+
+</html>
+
+
+
+
+<!-- <!doctype html>
+<html>
+
+<head>
+    <title>Advanced JS - Exercise 11.9</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1
+        <div id="dragme" draggable="true">
+            Drag Me Please!
+        </div>
+    </div>
+    <div class="box">2</div>
+
+    <script>
+        const dragme = document.querySelector("#dragme");
+        dragme.addEventListener("dragstart", (e) => {
+            dragme.style.opacity = .5;
+        });
+        dragme.addEventListener("dragend", (e) => {
+            dragme.style.opacity = "";
+        });
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach(box => {
+            box.addEventListener("dragenter", (e) => {
+                e.target.classList.add('green');
+            });
+            box.addEventListener("dragover", (e) => {
+                e.preventDefault();
+            });
+            box.addEventListener("dragleave", (e) => {
+                console.log("leave");
+                e.target.classList.remove('green');
+            });
+            box.addEventListener("drop", (e) => {
+                e.preventDefault();
+                console.log("dropped");
+                e.target.appendChild(dragme);
+            });
+        });
+        function dragStart(e) {
+            console.log("Started");
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!doctype html>
+<html>
+
+<body>
+    <div id="wrapper"></div>
+    <form action="anotherpage.html" method="get" onsubmit="return
+valForm()">
+        <input type="text" id="firstName" name="firstName" placeholder="First name" />
+
+        <input type="text" id="lastName" name="lastName" placeholder="Last name" />
+
+        <input type="text" id="age" name="age" placeholder="Age" />
+
+        <input type="text" id="homeTown" name="homeTown" placeholder="Home Town" />
+
+        <input type="submit" value="submit" />
+    </form>
+    <script>
+        function valForm() {
+            var p = event.target.children;
+            if (p.firstName.value == "") {
+                message("Need a first name!!");
+                return false;
+            }
+            if (p.lastName.value == "") {
+                message("Need a last name!!");
+                return false;
+            }
+            if (p.age.value == "") {
+                message("Need an age!!");
+                return false;
+            }
+            return true;
+        }
+        function message(m) {
+            document.getElementById("wrapper").innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>
+
+ -->
+
+
+
+<!-- <!doctype html>
+<html>
+
+<body>
+    <div id="wrapper"></div>
+    <form action="anotherpage.html" method="get" onsubmit="return
+valForm()">
+        <input type="text" id="firstName" name="firstName" placeholder="First name" />
+
+        <input type="text" id="lastName" name="lastName" placeholder="Last name" />
+
+        <input type="text" id="age" name="age" placeholder="Age" />
+
+        <input type="text" id="homeTown" name="homeTown" placeholder="Home Town"/>
+
+        <input type="submit" value="submit" />
+    </form>
+    <script>
+        function valForm() {
+            var p = event.target.children;
+            if (p.firstName.value == "") {
+                message("Need a first name!!");
+                return false;
+            }
+            if (p.lastName.value == "") {
+                message("Need a last name!!");
+                return false;
+            }
+            if (p.age.value == "") {
+                message("Need an age!!");
+                return false;
+            }
+            return true;
+        }
+        function message(m) {
+            document.getElementById("wrapper").innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>
+ -->
+
+
+<!-- <!doctype html>
+<html>
+<style>
+    div {
+        background-color: purple;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+</style>
+<div id="block"></div>
+<script>
+    const main = document.querySelector("#block");
+    let mover = { speed: 10, dir: 1, pos: 0 };
+    main.addEventListener("click", moveBlock);
+    function moveBlock() {
+        let x = 30;
+        setInterval(function () {
+            if (x < 1) {
+                clearInterval();
+            } else {
+                if (mover.pos > 800 || mover.pos < 0) {
+                    mover.dir *= -1;
+                }
+                x--;
+                mover.pos += x * mover.dir;
+                main.style.left = mover.pos + "px";
+                console.log(mover.pos);
+            }
+        }, 2);
+    }
+</script>
+</body>
+
+</html> -->
